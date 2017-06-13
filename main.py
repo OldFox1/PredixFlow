@@ -6,13 +6,12 @@ import time
 from flask import Flask
 import pyupm_buzzer as upm_buzzer
 
+from settings import windmill_pin, buzzer_pin, led_pin
 
 app = Flask(__name__)
 
 
-windmill_pin = 7
-buzzer_pin = 5
-led_pin = 4
+
 
 windmill = mraa.Gpio(windmill_pin)
 windmill.dir(mraa.DIR_OUT)
